@@ -18,31 +18,185 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 source $HOME/.local/bin/env
 ```
 
-
+<img src="images/macos_uv_install.png" alt="macos_uv_install" style="zoom:50%;" />
 
 ### Windows (Powershell)
 
 ``` 
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
-#### Official UV Installation Guide
-https://docs.astral.sh/uv/getting-started/installation/
+<img src="images/uv_install_Capture.JPG" alt="uv_install_Capture" style="zoom:50%;" />
+
+##### [Official UV Installation Guide](https://docs.astral.sh/uv/getting-started/installation/)
+
+---
 
 ## Execute Test Script
 
+```bash
+uv run requests_test_uv.py  
 ```
 
+Expected output:
+
+```python
+% uv run requests_test_uv.py                                 
+
+Python version:
+3.11.12
+Virtual environment path: /Users/claudiadeluna/.cache/uv/environments-v2/requests-test-uv-2b697ea58d864f8d
+
+
+Number of countries: 250
+
+
+Common name of the first country: South Georgia
+
+
+CCA3 of the first country: SGS
+
+
+Found country with CCA3 code: CZE Czech Republic
+
+{'altSpellings': ['CZ', 'Česká republika', 'Česko'],
+ 'area': 78865.0,
+ 'borders': ['AUT', 'DEU', 'POL', 'SVK'],
+ 'capital': ['Prague'],
+ 'capitalInfo': {'latlng': [50.08, 14.47]},
+ 'car': {'side': 'right', 'signs': ['CZ']},
+ 'cca2': 'CZ',
+ 'cca3': 'CZE',
+ 'ccn3': '203',
+ 'cioc': 'CZE',
+ 'coatOfArms': {'png': 'https://mainfacts.com/media/images/coats_of_arms/cz.png',
+                'svg': 'https://mainfacts.com/media/images/coats_of_arms/cz.svg'},
+ 'continents': ['Europe'],
+ 'currencies': {'CZK': {'name': 'Czech koruna', 'symbol': 'Kč'}},
+ 'demonyms': {'eng': {'f': 'Czech', 'm': 'Czech'},
+              'fra': {'f': 'Tchèque', 'm': 'Tchèque'}},
+ 'fifa': 'CZE',
+ 'flag': '🇨🇿',
+ 'flags': {'alt': 'The flag of Czechia is composed of two equal horizontal '
+                  'bands of white and red, with a blue isosceles triangle '
+                  'superimposed on the hoist side of the field. The triangle '
+                  'has its base on the hoist end and spans about two-fifth the '
+                  'width of the field.',
+           'png': 'https://flagcdn.com/w320/cz.png',
+           'svg': 'https://flagcdn.com/cz.svg'},
+ 'gini': {'2018': 25.0},
+ 'idd': {'root': '+4', 'suffixes': ['20']},
+ 'independent': True,
+ 'landlocked': True,
+ 'languages': {'ces': 'Czech', 'slk': 'Slovak'},
+ 'latlng': [49.75, 15.5],
+ 'maps': {'googleMaps': 'https://goo.gl/maps/47dmgeXMZyhDHyQW8',
+          'openStreetMaps': 'https://www.openstreetmap.org/relation/51684'},
+ 'name': {'common': 'Czechia',
+          'nativeName': {'ces': {'common': 'Česko',
+                                 'official': 'Česká republika'},
+                         'slk': {'common': 'Česko',
+                                 'official': 'Česká republika'}},
+          'official': 'Czech Republic'},
+ 'population': 10698896,
+ 'postalCode': {'format': '### ##', 'regex': '^(\\d{5})$'},
+ 'region': 'Europe',
+ 'startOfWeek': 'monday',
+ 'status': 'officially-assigned',
+ 'subregion': 'Central Europe',
+ 'timezones': ['UTC+01:00'],
+ 'tld': ['.cz'],
+ 'translations': {'ara': {'common': 'التشيك', 'official': 'جمهورية التشيك'},
+                  'bre': {'common': 'Tchekia', 'official': 'Republik Tchek'},
+                  'ces': {'common': 'Česko', 'official': 'Česká republika'},
+                  'cym': {'common': 'Y Weriniaeth Tsiec',
+                          'official': 'Y Weriniaeth Tsiec'},
+                  'deu': {'common': 'Tschechien',
+                          'official': 'Tschechische Republik'},
+                  'est': {'common': 'Tšehhi', 'official': 'Tšehhi Vabariik'},
+                  'fin': {'common': 'Tšekki', 'official': 'Tšekin tasavalta'},
+                  'fra': {'common': 'Tchéquie',
+                          'official': 'République tchèque'},
+                  'hrv': {'common': 'Češka', 'official': 'Češka'},
+                  'hun': {'common': 'Csehország',
+                          'official': 'Cseh Köztársaság'},
+                  'ita': {'common': 'Cechia', 'official': 'Repubblica Ceca'},
+                  'jpn': {'common': 'チェコ', 'official': 'チェコ共和国'},
+                  'kor': {'common': '체코', 'official': '체코'},
+                  'nld': {'common': 'Tsjechië',
+                          'official': 'Tsjechische Republiek'},
+                  'per': {'common': 'جمهوری چک', 'official': 'جمهوری چک'},
+                  'pol': {'common': 'Czechy', 'official': 'Republika Czeska'},
+                  'por': {'common': 'Chéquia', 'official': 'República Checa'},
+                  'rus': {'common': 'Чехия', 'official': 'Чешская Республика'},
+                  'slk': {'common': 'Česko', 'official': 'Česká republika'},
+                  'spa': {'common': 'Chequia', 'official': 'República Checa'},
+                  'srp': {'common': 'Чешка', 'official': 'Чешка Република'},
+                  'swe': {'common': 'Tjeckien',
+                          'official': 'Republiken Tjeckien'},
+                  'tur': {'common': 'Çekya', 'official': 'Çek Cumhuriyeti'},
+                  'urd': {'common': 'چيک', 'official': 'چيک جمہوريہ'},
+                  'zho': {'common': '捷克', 'official': '捷克共和国'}},
+ 'unMember': True}
+
+
+
+Keys of the first country dictionary:
+['name',
+ 'tld',
+ 'cca2',
+ 'ccn3',
+ 'cca3',
+ 'independent',
+ 'status',
+ 'unMember',
+ 'currencies',
+ 'idd',
+ 'capital',
+ 'altSpellings',
+ 'region',
+ 'languages',
+ 'translations',
+ 'latlng',
+ 'landlocked',
+ 'area',
+ 'demonyms',
+ 'flag',
+ 'maps',
+ 'population',
+ 'car',
+ 'timezones',
+ 'continents',
+ 'flags',
+ 'coatOfArms',
+ 'startOfWeek',
+ 'capitalInfo']
+claudiadeluna in ~/Indigo Wire Networks Dropbox/Claudia de Luna/scripts/python/2025/uv_it on main
+% 
+
 ```
+
 
 
 #### Inline Script Metadata
+
 https://docs.astral.sh/uv/guides/scripts/#running-a-script-with-dependencies
 
 
 ### Handy Commands
 
-uv --version
-uv python list
-uv python install 3.10
-uv run myscript.py
-uv init --script example.py --python 3.12
+| Command                                    | Description                                                  |
+| ------------------------------------------ | ------------------------------------------------------------ |
+| `uv --version`                             | Good test to confirm **uv** is installed as well as checking the version |
+| `uv python list`                           | Will display the versions of Python available/installed under **uv** management |
+| `uv python install 3.10`                   | Install the latest version of Python 3.10 under uv. This is functionaly often implemented with `pyenv`. |
+| `uv add --script example.py --python 3.12` | UV will add inline script metadata including the required version of Python <br />to a TOML "header" in the example.py script.  This gives the script all it <br />needs to be executed (run) under **uv** and create the required <br />virtual environment without any further action from the user. |
+| `uv run myscript.py`                       | This is the equivalent of of 'python myscript.py' but running it <br />under **uv** manages the virtual environment creation. |
+|                                            |                                                              |
+|                                            |                                                              |
+
+
+
+
+
+
+
