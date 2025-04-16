@@ -31,6 +31,34 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 
 ---
 
+## What to do with this Repository?
+
+This repository is intended to 
+
+1. provide brief instructions on installing **uv**
+2. provide a small Python script to test the installation
+
+No virtual environment needs to be built or activated.
+
+Executing the test script should
+
+1. Install Python version 3.11.12
+2. Create a virtual environment on demand when the script is run and install the requests module
+3. Sucessfully execute the script
+
+Example of the inline script metadata:
+
+```python
+# /// script
+# requires-python = "==3.11.12"
+# dependencies = [
+#     "requests",
+# ]
+# ///
+```
+
+
+
 ## Execute Test Script
 
 ```bash
