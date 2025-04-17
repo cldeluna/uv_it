@@ -10,6 +10,12 @@ Because UV is a comprehensive package manager it should be easier to create the 
 
 ## Install UV
 
+
+
+<img src="images/vimeo_icon.png" alt="vimeo_icon" style="zoom:33%;" />
+
+[Example of using this repository Video ~5m](https://vimeo.com/1076476487?share=copy#t=0)in
+
 ### Mac and Linux
 
 ```bash
