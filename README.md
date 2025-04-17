@@ -37,10 +37,13 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 When you install `uv` on **Windows using PowerShell**, the installer typically adds the `uv` binary to your user’s `AppData\Local\uv\bin` directory. However, **this change won't take effect in the same terminal session unless you manually update the `PATH` variable**.
 
 ```powershell
-# Update the PATH in your current PowerShell session so you can use uv right away:
-$env:USERPROFILE\AppData\Local\uv\bin
+# Update the PATH in your current PowerShell session so you can use uv right away.
+# Make sure you include the quotes
+"$env:USERPROFILE\AppData\Local\uv\bin"
+
 # Temporarily add to the current PowerShell session’s PATH:
 $env:Path += ";$env:USERPROFILE\AppData\Local\uv\bin"
+
 # Verify it worked
 uv --version
 
