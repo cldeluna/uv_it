@@ -6,34 +6,66 @@ Astral's uv is a fast, all-in-one Python package and project manager written in 
 
 ## Why are we using it?
 
-Because UV is a comprehensive package manager it shoudl be easier to create the necessary Python virtual environments for the scripts we will be executing in our Jinja2 workshop.
+Because UV is a comprehensive package manager it should be easier to create the necessary **Python virtual environments** for the scripts we will be executing in our Jinja2 workshop.
 
-## Installation
+## Install UV
 
 ### Mac and Linux
 
-```
+```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
+# Temporarily add to the current PowerShell session’s PATH:
 source $HOME/.local/bin/env
 ```
 
 <img src="images/macos_uv_install.png" alt="macos_uv_install" style="zoom:50%;" />
 
-### Windows (Powershell)
+### Windows (PowerShell)
+
+Install uv using PowerShell
 
 ``` 
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+
 ```
 <img src="images/uv_install_Capture.JPG" alt="uv_install_Capture" style="zoom:50%;" />
 
+When you install `uv` on **Windows using PowerShell**, the installer typically adds the `uv` binary to your user’s `AppData\Local\uv\bin` directory. However, **this change won't take effect in the same terminal session unless you manually update the `PATH` variable**.
+
+```powershell
+# Update the PATH in your current PowerShell session so you can use uv right away:
+$env:USERPROFILE\AppData\Local\uv\bin
+# Temporarily add to the current PowerShell session’s PATH:
+$env:Path += ";$env:USERPROFILE\AppData\Local\uv\bin"
+# Verify it worked
+uv --version
+
+```
+
+If you have any problems, open up a new PowerShell window and try to execute the `uv --version` command.
+
+If that does not work, please review the uv installation instructions:
+
 ##### [Official UV Installation Guide](https://docs.astral.sh/uv/getting-started/installation/)
+
+Tip: Make It Permanent (System/User Environment Variable)
+
+If you want `uv` to always be available from any new terminal:
+
+```
+[Environment]::SetEnvironmentVariable("Path", $env:Path + ";$env:USERPROFILE\AppData\Local\uv\bin", "User")
+```
+
+Then open up a new terminal.
 
 ---
 
 ## What to do with this Repository?
 
-This repository is intended to 
+**Download or Clone** the repository and move into the repository directory (unzip if you used the download option).
+
+This repository is intended to: 
 
 1. provide brief instructions on installing **uv**
 2. provide a small Python script to test the installation
