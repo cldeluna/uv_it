@@ -17,6 +17,9 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # Temporarily add to the current PowerShell session’s PATH:
 source $HOME/.local/bin/env
+
+# Verify it worked (See screen shot below for expected output)
+uv --version
 ```
 
 <img src="images/macos_uv_install.png" alt="macos_uv_install" style="zoom:50%;" />
